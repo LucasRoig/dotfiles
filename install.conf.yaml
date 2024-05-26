@@ -46,9 +46,9 @@
     description: installing Volta
   - command: ~/.volta/bin/volta install node
     description: installing node
-  # - command: chmod a+x ./install-docker.sh && ./install-docker.sh
-  #   description: Install Docker
-  #   stdin: true
+  - command: chmod a+x ./install-docker.sh && ./install-docker.sh
+    description: Install Docker
+    stdin: true
   - command: git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     description: install tmux plugin manager
   - command: sudo chsh -s /usr/bin/zsh $(whoami)
