@@ -103,8 +103,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
 alias e.="explorer.exe ."
-#create a pipe file with the name of the current tmux session this will be used by lazygit after
-alias nvim="nvim --listen /tmp/nvim-server-$(tmux display-message -p '#S').pipe"
+
+#If tmux is running
+if tmux info &> /dev/null; then 
+    #create a pipe file with the name of the current tmux session this will be used by lazygit after
+    alias nvim="nvim --listen /tmp/nvim-server-$(tmux display-message -p '#S').pipe"
+fi
+
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
