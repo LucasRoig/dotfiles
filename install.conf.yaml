@@ -11,6 +11,9 @@
     ~/.config:
       recursive: true
 
+- create: 
+  - ~/projets
+
 - link: 
     ~/.config/nvim: nvim
     ~/.config/starship.toml: starship.toml
