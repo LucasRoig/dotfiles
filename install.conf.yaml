@@ -49,6 +49,8 @@
   - command: chmod a+x ./install-docker.sh && ./install-docker.sh
     description: Install Docker
     stdin: true
+  - command: /home/linuxbrew/.linuxbrew/bin/go install sigs.k8s.io/kind@v0.24.0
+    description: install kind
   - command: git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     description: install tmux plugin manager
   - command: sudo chsh -s /usr/bin/zsh $(whoami)
