@@ -153,3 +153,7 @@ eval "$(zoxide init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+unset http_proxy
+unset HTTP_PROXY
+unset WSL_PAC_URL
