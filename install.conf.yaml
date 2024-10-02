@@ -34,7 +34,7 @@
   - command: source ~/.bashrc
   - command: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc
     description: Installing OhMyZsh
-  - command: /home/linuxbrew/.linuxbrew/bin/brew install starship zoxide gcc ripgrep cmake lazygit jesseduffield/lazydocker/lazydocker tmux neovim
+  - command: /home/linuxbrew/.linuxbrew/bin/brew install starship zoxide gcc ripgrep cmake lazygit jesseduffield/lazydocker/lazydocker tmux neovim just yq helm kubectl
   - command: git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
     description: Installing zsh-autosuggestions
   - command: git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
