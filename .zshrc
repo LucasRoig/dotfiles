@@ -121,10 +121,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# set PATH so it includes go bin if it exists
-if [ -d "$(go env GOPATH)/bin" ]; then
-    PATH="$(go env GOPATH)/bin:$PATH"
-fi
 # TMUX
 # set PATH so it includes tmuxifier's bin if it exists
 if [ -d "$HOME/.config/tmux/plugins/tmuxifier/bin" ] ; then
@@ -146,8 +142,14 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$(go env GOPATH)/bin:$PATH"
 fi
+# set PATH so it includes go bin if it exists
+if [ -d "$(go env GOPATH)/bin" ]; then
+    PATH="$(go env GOPATH)/bin:$PATH"
+fi
+
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
