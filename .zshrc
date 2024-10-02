@@ -121,6 +121,10 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# set PATH so it includes go bin if it exists
+if [ -d "$(go env GOPATH)/bin" ]; then
+    PATH="$(go env GOPATH)/bin:$PATH"
+fi
 # TMUX
 # set PATH so it includes tmuxifier's bin if it exists
 if [ -d "$HOME/.config/tmux/plugins/tmuxifier/bin" ] ; then
